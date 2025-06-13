@@ -7,96 +7,79 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f6f9;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .form-wrapper {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      width: 90%;
-      max-width: 500px;
+      background-color: #f2f2f2;
       text-align: center;
+      padding: 0;
+      margin: 0;
     }
 
-    img {
-      width: 180px;
-      height: auto;
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      width: 100px;
       margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
       color: #333;
+      margin-bottom: 10px;
     }
 
-    .support-text {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 25px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    h3 {
+      color: #666;
+      margin-bottom: 30px;
     }
 
     input, textarea {
       width: 100%;
-      margin-bottom: 15px;
       padding: 12px;
-      border: 1px solid #ccc;
+      margin: 10px 0;
+      box-sizing: border-box;
       border-radius: 6px;
-      font-size: 16px;
+      border: 1px solid #ccc;
     }
 
     button {
-      padding: 12px;
-      background-color: #007bff;
+      background-color: #008cba;
       color: white;
+      padding: 12px 20px;
       border: none;
       border-radius: 6px;
-      font-size: 16px;
       cursor: pointer;
-      width: 100%;
+      font-size: 16px;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #005f73;
     }
   </style>
 </head>
 <body>
-
-  <div class="form-wrapper">
-    <img src="https://technocloud.my/logo.png" alt="Technocloud Logo" />
-
+  <div class="container">
+    <img class="logo" src="logo.png" alt="Technocloud Logo" />
     <h1>Welcome to Technocloud Support!</h1>
-    <div class="support-text">
-      Please fill in the form below for further assistance.
-    </div>
+    <h3>Please fill in the form below for further assistance.</h3>
 
-    <form action="https://formspree.io/f/manjobea" method="POST">
-      <input type="hidden" name="_redirect" value="https://technocloud.my/thank-you.html">
-
+    <form action="https://formsubmit.io/send/khalilullah@technovation.com.my" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
-
       <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
 
-      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <!-- Redirect after submission -->
+      <input type="hidden" name="_redirect" value="https://technocloud.my/thank-you.html" />
+
+      <!-- Honeypot for spam prevention -->
+      <input type="text" name="_honey" style="display:none">
 
       <button type="submit">Submit</button>
     </form>
   </div>
-
 </body>
 </html>
