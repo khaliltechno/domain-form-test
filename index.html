@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Technocloud Contact Form</title>
+  <title>Technocloud Support</title>
+  <script src="https://pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://pageclip.co/v1/pageclip.css" media="screen">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      text-align: center;
-      padding: 0;
+      background-color: #f4f4f4;
       margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .container {
       max-width: 500px;
-      margin: 40px auto;
+      width: 90%;
       background-color: white;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 50px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
     .logo {
@@ -28,58 +34,54 @@
     }
 
     h1 {
-      color: #333;
+      font-size: 24px;
       margin-bottom: 10px;
     }
 
-    h3 {
-      color: #666;
-      margin-bottom: 30px;
+    h2 {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
     }
 
     input, textarea {
       width: 100%;
       padding: 12px;
-      margin: 10px 0;
-      box-sizing: border-box;
-      border-radius: 6px;
+      margin: 8px 0;
       border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
 
     button {
-      background-color: #008cba;
+      background-color: #007BFF;
       color: white;
       padding: 12px 20px;
       border: none;
-      border-radius: 6px;
+      border-radius: 4px;
       cursor: pointer;
-      font-size: 16px;
     }
 
     button:hover {
-      background-color: #005f73;
+      background-color: #0056b3;
     }
+
   </style>
 </head>
 <body>
+
   <div class="container">
-    <img class="logo" src="logo.png" alt="Technocloud Logo" />
+    <img src="logo.png" alt="Technocloud Logo" class="logo" />
     <h1>Welcome to Technocloud Support!</h1>
-    <h3>Please fill in the form below for further assistance.</h3>
+    <h2>Please fill in the form below for further assistance.</h2>
 
-    <form action="https://formsubmit.io/send/khalilullah@technovation.com.my" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-
-      <!-- Redirect after submission -->
-      <input type="hidden" name="_redirect" value="https://technocloud.my/thank-you.html" />
-
-      <!-- Honeypot for spam prevention -->
-      <input type="text" name="_honey" style="display:none">
-
-      <button type="submit">Submit</button>
+    <form action="https://pageclip.co/site/technocloud/b/form" class="pageclip-form" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="pageclip-form__submit">Submit</button>
     </form>
   </div>
+
 </body>
 </html>
