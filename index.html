@@ -17,7 +17,7 @@
     }
     .container {
       background: white;
-      padding: 30px;
+      padding: 30px 40px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       width: 100%;
@@ -25,18 +25,24 @@
       text-align: center;
     }
     img.logo {
-      width: 120px;
-      margin-bottom: 20px;
+      width: 160px;
+      margin-bottom: 15px;
     }
     h1 {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: #333;
+      margin-bottom: 10px;
+    }
+    p.subtext {
+      font-size: 1rem;
+      color: #555;
       margin-bottom: 20px;
     }
     input, textarea {
-      width: 100%;
+      width: 90%;
+      margin: 10px auto;
+      display: block;
       padding: 12px;
-      margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
@@ -44,11 +50,12 @@
     button {
       background-color: #007BFF;
       color: white;
-      padding: 12px;
+      padding: 12px 20px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       font-size: 1rem;
+      margin-top: 10px;
     }
     button:hover {
       background-color: #0056b3;
@@ -58,12 +65,13 @@
 <body>
   <div class="container">
     <img src="logo.png" alt="Technocloud Logo" class="logo" />
-    <h1>Welcome to Technocloud Support! Please contact us for further information.</h1>
+    <h1>Welcome to Technocloud Support!</h1>
+    <p class="subtext">Please fill in the form below for further assistance.</p>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit">Submit</button>
     </form>
   </div>
 </body>
