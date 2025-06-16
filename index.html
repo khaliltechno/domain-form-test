@@ -14,6 +14,7 @@
       align-items: center;
       height: 100vh;
     }
+
     .card {
       background: white;
       padding: 40px 30px;
@@ -21,21 +22,41 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       width: 100%;
       max-width: 520px;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    .card-inner {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .logo img {
-      max-width: 180px;
+      max-width: 220px;
       margin-bottom: 25px;
     }
+
     h1 {
       font-size: 1.6em;
       margin-bottom: 12px;
+      text-align: center;
     }
+
     p {
       font-size: 0.95em;
       color: #555;
       margin-bottom: 25px;
+      text-align: center;
     }
+
+    form {
+      width: 100%;
+    }
+
     input, textarea {
       width: 100%;
       padding: 12px;
@@ -44,6 +65,7 @@
       border-radius: 6px;
       font-size: 1em;
     }
+
     button {
       width: 100%;
       padding: 12px;
@@ -54,6 +76,7 @@
       border-radius: 6px;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #0056b3;
     }
@@ -61,18 +84,20 @@
 </head>
 <body>
   <div class="card">
-    <div class="logo">
-      <img src="https://technocloud.my/logo.png" alt="Technocloud Logo">
+    <div class="card-inner">
+      <div class="logo">
+        <img src="https://technocloud.my/logo.png" alt="Technocloud Logo">
+      </div>
+      <h1>Welcome to Technocloud Support!</h1>
+      <p>Please fill in the form below for further assistance.</p>
+      <form action="https://formbold.com/s/oyG1N" method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required />
+        <input type="email" name="email" placeholder="Enter your email address" required />
+        <textarea name="message" placeholder="Type your message here..." rows="4" required></textarea>
+        <input type="hidden" name="_redirect" value="https://technocloud.my/thankyou.html" />
+        <button type="submit">Submit</button>
+      </form>
     </div>
-    <h1>Welcome to Technocloud Support!</h1>
-    <p>Please fill in the form below for further assistance.</p>
-    <form action="https://formbold.com/s/oyG1N" method="POST">
-      <input type="text" name="name" placeholder="Enter your name" required />
-      <input type="email" name="email" placeholder="Enter your email address" required />
-      <textarea name="message" placeholder="Type your message here..." rows="4" required></textarea>
-      <input type="hidden" name="_redirect" value="https://technocloud.my/thankyou.html" />
-      <button type="submit">Submit</button>
-    </form>
   </div>
 </body>
 </html>
